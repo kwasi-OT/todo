@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import moon from './assets/icon-moon.svg';
+import Form from './components/Form';
+import TodoItem from './components/TodoItem';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="appContainer">
+      <div className='header'>
+        <div className='headerContent'>
+          <h1>TODO</h1>
+          <img src={moon} alt='moon icon'/>
+        </div>
+        <div className='formContainer'>
+          <Form/>
+        </div>
+      </div>
+      <div>
+        <TodoItem/>
+      </div>
     </div>
   );
 }
