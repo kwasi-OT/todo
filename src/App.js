@@ -1,5 +1,6 @@
 import './App.css';
 import moon from './assets/icon-moon.svg';
+import Count from './components/Count';
 import FilterNav from './components/FilterNav';
 import Form from './components/Form';
 import TodoItem from './components/TodoItem';
@@ -28,6 +29,10 @@ function App() {
           <TodoItem/>
           <TodoItem/>
           <TodoItem/>
+        </div>
+        <hr/>
+        <div>
+          <Count/>
         </div>
       </div>
     </div>
