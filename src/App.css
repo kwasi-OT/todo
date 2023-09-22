@@ -70,19 +70,56 @@ input[type='text'] {
   padding: 0.9rem;
   border-radius: 0.5rem;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .item {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .itemsContainer {
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todoList {
   width: 90%;
-  height: 50vh;
+  height: fit-content;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 0.5rem;
   position: relative;
   top: -1.7rem;
+}
+
+.filterNav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.filterButton {
+  border: none;
+  background: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.cancel {
+  color: blue;
+}
+
+.delete {
+  color: #ffb3b3;
+}
+
+.itemLine {
+  width: 100%;
+  color: red;
 }

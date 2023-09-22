@@ -18,9 +18,17 @@ function App() {
           </div>
         </div>
       </div>
-      <div className='itemsContainer'>
-        <FilterNav/>
-        <TodoItem/>
+      <div className='todoList'>
+        <div>
+          <FilterNav/>
+        </div>
+        <hr/>
+        <div>
+          <TodoItem/>
+          <TodoItem/>
+          <TodoItem/>
+          <TodoItem/>
+        </div>
       </div>
     </div>
   );
