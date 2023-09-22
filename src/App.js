@@ -1,5 +1,6 @@
 import './App.css';
 import moon from './assets/icon-moon.svg';
+import FilterNav from './components/FilterNav';
 import Form from './components/Form';
 import TodoItem from './components/TodoItem';
 
@@ -15,7 +16,8 @@ function App() {
           <Form/>
         </div>
       </div>
-      <div>
+      <div className='itemsContainer'>
+        <FilterNav/>
         <TodoItem/>
       </div>
     </div>
