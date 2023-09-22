@@ -6,14 +6,14 @@ import { MdDeleteForever } from "react-icons/md";
 function TodoItem() {
     return (
         <>
-        <div className='itemsContainer'>
-            <div className='item'>
-                <MdCancel className='cancel'/>
-                <p>item</p>
+            <div className='itemsContainer'>
+                <div className='item'>
+                    <MdCancel className='cancel'/>
+                    <p>item</p>
+                </div>
+                <MdDeleteForever className='delete'/>
             </div>
-            <MdDeleteForever className='delete'/>
-        </div>
-        <hr color='#e0ebeb'/>
+            <hr color='#e0ebeb'/>
         </>
     )
 }
