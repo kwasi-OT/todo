@@ -1,15 +1,14 @@
 import React from 'react';
-import { MdCancel } from "react-icons/md";
-import { MdDeleteForever } from "react-icons/md";
+import { MdDeleteForever, MdCancel, MdCheck } from "react-icons/md";
 
 
-function TodoItem() {
+function TodoItem({todoData}) {
     return (
         <>
             <div className='itemsContainer'>
                 <div className='item'>
                     <MdCancel className='cancel'/>
-                    <p>item</p>
+                    <p>{todoData}</p>
                 </div>
                 <MdDeleteForever className='delete'/>
             </div>
@@ -18,4 +17,4 @@ function TodoItem() {
     )
 }
 
-export default TodoItem
+export default TodoItem;

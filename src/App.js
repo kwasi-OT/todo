@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import './App.css';
 import moon from './assets/icon-moon.svg';
 import Count from './components/Count';
@@ -6,6 +7,20 @@ import Form from './components/Form';
 import TodoItem from './components/TodoItem';
 
 function App() {
+  const[todoList, setTodoList] = useState([]);
+
+  // function to add new todo
+    const addTodo = (userInput) => {
+      const newTodo = {
+        id: Date.now(),
+        text: userInput,
+        status: false,
+      }
+
+      setTodoList(prevData => [newTodo, ...prevData])
+    }
+
+
   return (
     <div className="appContainer">
       <div className='headerContainer'>
@@ -15,7 +30,7 @@ function App() {
             <img src={moon} alt='moon icon'/>
           </div>
           <div className='formContainer'>
-            <Form/>
+            <Form addHandler={addTodo}/>
           </div>
         </div>
       </div>
@@ -25,10 +40,7 @@ function App() {
         </div>
         <hr/>
         <div>
-          <TodoItem/>
-          <TodoItem/>
-          <TodoItem/>
-          <TodoItem/>
+          {todoList.map(item => <TodoItem todoData={item.text} key={item.id}/>)}
         </div>
         <hr/>
         <div>
