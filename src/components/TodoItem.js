@@ -7,7 +7,7 @@ function TodoItem({todoData, deleteItem, setTodoStatus}) {
         <>
             <div className='itemsContainer'>
                 <div className='item'>
-                    {todoData.status ? <MdCheck className='cancel'/> : <MdCancel className='cancel'/>}
+                    {todoData.status ? <MdCheck onClick={() => setTodoStatus(todoData.id)} className='cancel'/> : <MdCancel onClick={() => setTodoStatus(todoData.id)} className='cancel'/>}
                     <p>{todoData.text}</p>
                 </div>
                 <MdDeleteForever onClick={() => deleteItem(todoData.id)} className='delete'/>
