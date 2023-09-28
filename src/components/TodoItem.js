@@ -10,7 +10,7 @@ function TodoItem({todoData, deleteItem}) {
                     <MdCancel className='cancel'/>
                     <p>{todoData.text}</p>
                 </div>
-                <MdDeleteForever onClick={() => (deleteItem.id)} className='delete'/>
+                <MdDeleteForever onClick={() => deleteItem(todoData.id)} className='delete'/>
             </div>
             <hr color='#e0ebeb'/>
         </>
