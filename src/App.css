@@ -108,12 +108,18 @@ input[type='text'] {
   border: none;
   background: none;
   font-size: 0.95rem;
+  color: gray;
   cursor: pointer;
 }
 
 .cancel {
   color: blue;
   cursor: pointer;
+}
+
+.completedFont.completed {
+  text-decoration: line-through;
+  color: gray;
 }
 
 .delete {
