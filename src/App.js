@@ -26,6 +26,18 @@ function App() {
       setTodoList(todoItems);
     }
 
+    // function to toggle item completion
+    const toggleItem = (id) => {
+      setTodoList(
+        todoList.map(todo => {
+          if(todo.id === id) {
+            return {...todo, status: !todo.status};
+          }
+          return todo;
+        })
+      )
+    }
+
   return (
     <div className="appContainer">
       <div className='headerContainer'>
