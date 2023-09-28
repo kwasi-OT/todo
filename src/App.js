@@ -20,6 +20,11 @@ function App() {
       setTodoList(prevData => [newTodo, ...prevData])
     }
 
+    // function to remove todo item from list
+    const removeTodoItem = (id) => {
+      const todoItems = todoList.filter(todo => todo.id !== id);
+      setTodoList(todoItems);
+    }
 
   return (
     <div className="appContainer">
