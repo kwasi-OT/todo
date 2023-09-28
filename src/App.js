@@ -45,7 +45,7 @@ function App() {
         </div>
         <hr/>
         <div>
-          {todoList.map(item => <TodoItem todoData={item.text} key={item.id}/>)}
+          {todoList.map(item => <TodoItem deleteItem={removeTodoItem} todoData={item} key={item.id}/>)}
         </div>
         <hr/>
         <div>

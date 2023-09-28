@@ -2,15 +2,15 @@ import React from 'react';
 import { MdDeleteForever, MdCancel, MdCheck } from "react-icons/md";
 
 
-function TodoItem({todoData}) {
+function TodoItem({todoData, deleteItem}) {
     return (
         <>
             <div className='itemsContainer'>
                 <div className='item'>
                     <MdCancel className='cancel'/>
-                    <p>{todoData}</p>
+                    <p>{todoData.text}</p>
                 </div>
-                <MdDeleteForever className='delete'/>
+                <MdDeleteForever onClick={() => (deleteItem.id)} className='delete'/>
             </div>
             <hr color='#e0ebeb'/>
         </>
