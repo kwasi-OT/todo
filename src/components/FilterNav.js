@@ -1,11 +1,11 @@
 import React from 'react';
 
-function FilterNav() {
+function FilterNav({addFilter}) {
     return (
         <div className='filterNav'>
-            <button type='button' className='filterButton'>All</button>
-            <button type='button' className='filterButton'>Active</button>
-            <button type='button' className='filterButton'>Completed</button>
+            <button onClick={() => addFilter('all')} type='button' className='filterButton'>All</button>
+            <button onClick={() => addFilter('active')} type='button' className='filterButton'>Active</button>
+            <button onClick={() => addFilter('completed')} type='button' className='filterButton'>Completed</button>
         </div>
     )
 }
