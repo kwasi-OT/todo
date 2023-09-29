@@ -61,9 +61,24 @@ function App() {
     }
 
     return filteredItems.map(item => 
-    <TodoItem setTodoStatus={toggleItem} 
-    deleteItem={removeTodoItem} 
-    todoData={item} key={item.id}/>);
+      <TodoItem setTodoStatus={toggleItem} 
+      deleteItem={removeTodoItem} 
+      todoData={item} key={item.id}/>
+    );
+  }
+
+  // function to count the number of items based on the filter conditions
+  const countItems = () => {
+    let count = 0;
+    if (filterList === "all") {
+      count = todoList.length;
+    } else if (filterList === "active") {
+      count = todoList.filter(todoItem => !todoItem.status).length;
+    } else if (filterList === "completed") {
+      count = todoList.filter(todoItem => todoItem.status).length;
+    }
+
+    return count;
   }
 
   return (
@@ -89,7 +104,7 @@ function App() {
         </div>
         <hr/>
         <div>
-          <Count clearItem={clearCompleted}/>
+          <Count countItems={countItems} clearItem={clearCompleted}/>
         </div>
       </div>
     </div>

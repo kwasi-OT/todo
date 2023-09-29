@@ -112,6 +112,11 @@ input[type='text'] {
   cursor: pointer;
 }
 
+.filterButton:focus {
+  color: #000;
+  font-weight: 600;
+}
+
 .cancel {
   color: blue;
   cursor: pointer;
