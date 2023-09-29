@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import moon from './assets/icon-moon.svg';
+import sun from './assets/icon-sun.svg';
 import Count from './components/Count';
 import FilterNav from './components/FilterNav';
 import Form from './components/Form';
