@@ -46,8 +46,24 @@ function App() {
   }
 
   // function to filter tasks
-  const filterTodo = (value) => {
-    setFilterList(value)
+  const filterTodo = (value) => setFilterList(value);
+
+  // function to loop through filtered tasks
+  const filterTodoList = () => {
+    let filteredItems = todoList;
+
+    if (filterList === "all") {
+      filteredItems = todoList;
+    } else if (filterList === "active") {
+      filteredItems = todoList.filter(todo => !todo.status);
+    } else if (filterList === "completed") {
+      filteredItems = todoList.filter(todo => todo.status);
+    }
+
+    return filteredItems.map(item => 
+    <TodoItem setTodoStatus={toggleItem} 
+    deleteItem={removeTodoItem} 
+    todoData={item} key={item.id}/>);
   }
 
   return (
@@ -69,7 +85,7 @@ function App() {
         </div>
         <hr/>
         <div>
-          {todoList.map(item => <TodoItem setTodoStatus={toggleItem} deleteItem={removeTodoItem} todoData={item} key={item.id}/>)}
+          {filterTodoList()}
         </div>
         <hr/>
         <div>
