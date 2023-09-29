@@ -20,23 +20,29 @@ function App() {
       setTodoList(prevData => [newTodo, ...prevData])
     }
 
-    // function to remove todo item from list
-    const removeTodoItem = (id) => {
-      const todoItems = todoList.filter(todo => todo.id !== id);
-      setTodoList(todoItems);
-    }
+  // function to remove todo item from list
+  const removeTodoItem = (id) => {
+    const todoItems = todoList.filter(todo => todo.id !== id);
+    setTodoList(todoItems);
+  }
 
-    // function to toggle item completion
-    const toggleItem = (id) => {
-      setTodoList(
-        todoList.map(todo => {
-          if(todo.id === id) {
-            return {...todo, status: !todo.status};
-          }
-          return todo;
-        })
-      )
-    }
+  // function to toggle item completion
+  const toggleItem = (id) => {
+    setTodoList(
+      todoList.map(todo => {
+        if(todo.id === id) {
+          return {...todo, status: !todo.status};
+        }
+        return todo;
+      })
+    )
+  }
+
+  // function to clear completed tasks
+  const clearCompleted = () => {
+    const todoItems = todoList.filter(todo => !todo.status);
+    setTodoList(todoItems);
+  }
 
   return (
     <div className="appContainer">
