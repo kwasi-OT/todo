@@ -46,8 +46,8 @@ function App() {
   }
 
   // function to filter tasks
-  const filterTodo = () => {
-
+  const filterTodo = (value) => {
+    setFilterList(value)
   }
 
   return (
@@ -65,7 +65,7 @@ function App() {
       </div>
       <div className='todoList'>
         <div>
-          <FilterNav/>
+          <FilterNav addFilter={filterTodo}/>
         </div>
         <hr/>
         <div>
