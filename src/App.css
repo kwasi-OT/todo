@@ -146,6 +146,11 @@ input[type='text'] {
   border: none;
   background: none;
   color: gray;
+  cursor: pointer;
+}
+
+.bottomCount button:focus {
+  color: #000;
 }
 
 
