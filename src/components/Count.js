@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Count() {
+function Count({clearItem}) {
     return (
         <div className='bottomCount'>
             <p className='numItems'>Total</p>
-            <button type='button'>Clear Completed</button>
+        <button onClick={clearItem} type='button'>Clear Completed</button>
         </div>
     )
 }
