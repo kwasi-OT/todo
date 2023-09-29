@@ -4,7 +4,7 @@ function Count({clearItem}) {
     return (
         <div className='bottomCount'>
             <p className='numItems'>Total</p>
-        <button onClick={clearItem} type='button'>Clear Completed</button>
+        <button className='clearCompleted' onClick={clearItem} type='button'>Clear Completed</button>
         </div>
     )
 }
