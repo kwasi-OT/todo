@@ -8,6 +8,7 @@ import TodoItem from './components/TodoItem';
 
 function App() {
   const[todoList, setTodoList] = useState([]);
+  const[filterList, setFilterList] = useState('all');
 
   // function to add new todo
     const addTodo = (userInput) => {
@@ -42,6 +43,11 @@ function App() {
   const clearCompleted = () => {
     const todoItems = todoList.filter(todo => !todo.status);
     setTodoList(todoItems);
+  }
+
+  // function to filter tasks
+  const filterTodo = () => {
+
   }
 
   return (
