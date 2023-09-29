@@ -67,7 +67,7 @@ function App() {
         </div>
         <hr/>
         <div>
-          <Count/>
+          <Count clearItem={clearCompleted}/>
         </div>
       </div>
     </div>
