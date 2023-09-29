@@ -104,7 +104,7 @@ function App() {
         </div>
         <hr/>
         <div>
-          <Count countItems={countItems} clearItem={clearCompleted}/>
+          <Count count={countItems()} clearItem={clearCompleted}/>
         </div>
       </div>
     </div>
