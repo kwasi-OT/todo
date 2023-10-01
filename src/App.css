@@ -56,6 +56,10 @@
   border-radius: 0.5rem;
 }
 
+.formContainer.dark {
+  background-color: #000d1a;
+}
+
 .formContent {
   display: flex;
   justify-content: space-between;
@@ -105,6 +109,11 @@ input[type='text'] {
   top: -1.7rem;
 }
 
+.todoList.dark {
+  background-color: #000d1a;
+  color: #f0f5f5;
+}
+
 .filterNav {
   display: flex;
   justify-content: center;
@@ -121,7 +130,7 @@ input[type='text'] {
 }
 
 .filterButton:focus {
-  color: #000;
+  /* color: #000; */
   font-weight: 600;
 }
 
@@ -163,7 +172,8 @@ input[type='text'] {
 }
 
 .bottomCount button:focus {
-  color: #000;
+  /* color: #000; */
+  font-weight: 600;
 }
 
 

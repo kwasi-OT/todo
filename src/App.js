@@ -94,7 +94,7 @@ function App() {
             <img src={darkTheme ? sun : moon} onClick={themeHandler} alt='moon icon'/>
           </div>
           <div className={`formContainer ${darkTheme ? "dark" : ""}`}>
-            <Form addHandler={addTodo}/>
+            <Form addHandler={addTodo} addTheme={darkTheme}/>
           </div>
         </div>
       </div>
