@@ -93,12 +93,12 @@ function App() {
             <h1>TODO</h1>
             <img src={darkTheme ? sun : moon} onClick={themeHandler} alt='moon icon'/>
           </div>
-          <div className='formContainer'>
+          <div className={`formContainer ${darkTheme ? "dark" : ""}`}>
             <Form addHandler={addTodo}/>
           </div>
         </div>
       </div>
-      <div className='todoList'>
+      <div className={`todoList ${darkTheme ? "dark" : ""}`}>
         <div>
           <FilterNav addFilter={filterTodo}/>
         </div>
