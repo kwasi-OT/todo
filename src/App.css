@@ -94,6 +94,11 @@ input[type='text'] {
   cursor: pointer;
 }
 
+.formButton.dark {
+  background-color: #003366;
+  color: gray;
+}
+
 .item {
   display: flex;
   align-items: center;
