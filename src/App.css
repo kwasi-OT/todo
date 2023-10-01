@@ -28,6 +28,11 @@
   padding-top: 1.6rem;
 }
 
+.headerContainer.dark {
+  background-image: linear-gradient(0deg, rgba(0, 51, 102, 0.5), rgba(0, 51, 102, 0.5)), 
+  url(./assets/bg-desktop-light.jpg);
+}
+
 .header {
   width: 90%;
   height: 70%;
@@ -150,6 +155,11 @@ input[type='text'] {
 
 .cancel {
   color: blue;
+  cursor: pointer;
+}
+
+.check {
+  color: green;
   cursor: pointer;
 }
 
