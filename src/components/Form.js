@@ -12,7 +12,7 @@ function Form({addHandler, addTheme}) {
 
     return (
         <form className={`formContent ${addTheme ? 'dark' : ''}`} onSubmit={handleSubmit}>
-            <input type="text" id='item' value={userInput} onChange={(e) => setUserInput(e.target.value)} name='item' placeholder='Create new ToDo item' required/>
+            <input className={`formInput ${addTheme ? 'dark' : ''}`} type="text" id='item' value={userInput} onChange={(e) => setUserInput(e.target.value)} name='item' placeholder='Create new ToDo item' required/>
             <button className='formButton' type="submit">Add</button>
         </form>
     )

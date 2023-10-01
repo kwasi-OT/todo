@@ -67,6 +67,15 @@
   margin: 0 auto;
 }
 
+.formContent.dark {
+  background-color: #000d1a;
+}
+
+.formInput.dark {
+  background-color: #000d1a;
+  color: gray;
+}
+
 input[type='text'] {
   width: 80%;
   border: none;
