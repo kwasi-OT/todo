@@ -86,7 +86,7 @@ function App() {
   }
 
   return (
-    <div className="appContainer">
+    <div className={`appContainer ${darkTheme ? "dark" : "light"}`}>
       <div className='headerContainer'>
         <div className='header'>
           <div className='headerContent'>
