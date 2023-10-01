@@ -6,8 +6,11 @@ import Count from './components/Count';
 import FilterNav from './components/FilterNav';
 import Form from './components/Form';
 import TodoItem from './components/TodoItem';
+import { GetThemeValues } from './components/ContextTheme';
 
 function App() {
+  const {darkTheme, themeHandler} = GetThemeValues();
+
   const[todoList, setTodoList] = useState([]);
   const[filterList, setFilterList] = useState('all');
 
@@ -88,7 +91,7 @@ function App() {
         <div className='header'>
           <div className='headerContent'>
             <h1>TODO</h1>
-            <img src={moon} alt='moon icon'/>
+            <img src={darkTheme ? sun : moon} onClick={themeHandler} alt='moon icon'/>
           </div>
           <div className='formContainer'>
             <Form addHandler={addTodo}/>
