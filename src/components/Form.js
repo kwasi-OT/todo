@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-function Form({addHandler}) {
+function Form({addHandler, addTheme}) {
     const[userInput, setUserInput] = useState("");
 
     const handleSubmit = (e) => {
@@ -11,7 +11,7 @@ function Form({addHandler}) {
     };
 
     return (
-        <form className='formContent' onSubmit={handleSubmit}>
+        <form className={`formContent ${addTheme ? 'dark' : ''}`} onSubmit={handleSubmit}>
             <input type="text" id='item' value={userInput} onChange={(e) => setUserInput(e.target.value)} name='item' placeholder='Create new ToDo item' required/>
             <button className='formButton' type="submit">Add</button>
         </form>
